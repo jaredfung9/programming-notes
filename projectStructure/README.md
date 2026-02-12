@@ -20,9 +20,11 @@ create a project directory and copy the Makefile into it
 # PROJECT STRUCTURES
 As a general rule of thumb, split your project into phases.
 ## PHASE 1: SPECIFICATION & DESIGN
-Understand the requirements of your project. If this is a personal project, first sketch out *what* your project wants to do. I prefer including the *why* I want to complete this project as well (for Resume? Hobby? Skill-Dev?)
-Next, draft a rough **design doc**. Think modularly. How will each module interact? Depending on the module's complexity, you may want to document the API.  
-You need *some* amount of planning, but don't get bogged down documenting everything. Like all good writing, your documentation depends on your audience. Your future self or teammates will thank you.
+Understand the requirements of your project.  
+If this is a personal project, first sketch out *what* your project wants to do. I prefer including the *why* I want to complete this project as well (for Resume? Hobby? Skill-Dev?)  
+Next, draft a rough **design doc**. Think modularly. How will each module interact? Depending on the module's complexity, you may want to document the API   
+You need *some* amount of planning, but don't get bogged down documenting everything.  
+Like all good writing, your documentation depends on your audience. Your future self or teammates will thank you.
 ## PHASE 2: PROJECT SET-UP
 Using your design doc, set-up:
 0. Project Directory
