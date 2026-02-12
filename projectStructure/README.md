@@ -1,3 +1,21 @@
+# Makefile
+Included is a GENERIC Makefile used to initialize a basic project directory for C/C++
+## USAGE
+create a project directory and copy the Makefile into it
+* make init: initialize the subdirectories and create a main file at src/main.c
+* make: will compile the necessary object files and output an executable under build/bin
+* make run: compile executable as needed then run the executable
+* make clean: clean all obj and bin files
+* Put source files in the src/ directory
+* Put header files in the include/ directory
+
+## CUSTOMIZATION
+* OUT is the name of the compiled binary program
+* OBJS list all the object files used to compile the final executable.
+* Each entry in OBJS must conform to the following form: $(OBJ)/SOURCE_FILENAME.o
+* OBJ points to the directory to place object files
+* BIN points to the directory to place the final executable
+
 # PROJECT STRUCTURES
 As a general rule of thumb, split your project into phases.
 ## PHASE 1: SPECIFICATION & DESIGN
