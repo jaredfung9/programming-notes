@@ -1,3 +1,6 @@
+OBJS=$(OBJ)/main.o
+OUT=main
+
 CC=clang
 WARNING=-Wall -Wextra
 CFLAGS-DEBUG=-g $(WARNING) -Werror
@@ -5,9 +8,6 @@ CFLAGS-RELEASE=$(WARNING)
 INCLUDE=-Iinclude
 OBJ=build/obj
 BIN=build/bin/$(OUT)
-
-OUT=main
-OBJS=$(OBJ)/main.o
 
 all: $(BIN)
 
