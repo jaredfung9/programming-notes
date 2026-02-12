@@ -15,9 +15,9 @@ run: $(BIN)
 	./$(BIN)
 
 $(BIN): $(OBJS)
-	$(CC) $(CFLAGS-DEBUG) $(INCLUDE) $< -o $(BIN)
+	$(CC) $(CFLAGS-DEBUG) $(INCLUDE) $^ -o $(BIN)
 $(OBJ)/%.o: src/%.c
-	$(CC) $(CFLAGS-DEBUG) $(INCLUDE) -c $< -o $@
+	$(CC) $(CFLAGS-DEBUG) $(INCLUDE) -c $^ -o $@
 
 clean:
 	rm build/obj/* build/bin/*
