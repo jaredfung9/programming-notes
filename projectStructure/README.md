@@ -8,6 +8,7 @@ create a project directory and copy the Makefile into it
 * make clean: clean all obj and bin files
 * Put source files in the src/ directory
 * Put header files in the include/ directory
+
 ** Don't blindly follow this project structure. Modify or write a structure that best fits your project needs! **
 ## CUSTOMIZATION
 * OUT is the name of the compiled binary program
