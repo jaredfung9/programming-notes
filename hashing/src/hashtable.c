@@ -5,8 +5,8 @@
 #include <string.h>
 
 //const static double LOAD_FACTOR = 0.5F; 
-const static size_t DEFAULT_TABLE_SIZE = 256;
-const static size_t MAX_STRING_LENGTH = 1024;
+static const size_t DEFAULT_TABLE_SIZE = 256;
+static const size_t MAX_STRING_LENGTH = 1024;
 
 typedef struct HashTable 
 {
@@ -48,6 +48,7 @@ void free_hashtable(HashTable* table)
 			free(entry);
 		}
 	}
+	free(table->data);
 	free(table);
 }
 
@@ -57,15 +58,27 @@ uint64_t getBucket(HashTable* table, char* string)
 	return hash % table->maximum_item_count;
 }
 
+/*
+TODO: Resize Table based on load factor
+TODO: Quadratic Probing
+*/
 void insert(HashTable* table, char* insertion_string) {
 	size_t length = strnlen(insertion_string, MAX_STRING_LENGTH);
 	uint64_t bucket = getBucket(table, insertion_string);
 	table->data[bucket] = insertion_string;
 }
 
+/*
+TODO: FAILURE CASE!
+TODO: Quadratic Probing
+*/
 char* lookup(HashTable* table, char* target_string)
 {
 	size_t length = strnlen(target_string, MAX_STRING_LENGTH);
 	uint64_t bucket = getBucket(table, target_string); 
 	return table->data[bucket];
 }
+
+/*
+TODO: Entry deletion function
+*/

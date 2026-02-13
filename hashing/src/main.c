@@ -5,10 +5,11 @@
 int main()
 {
 	HashTable* table = init_hashtable();
-	char* str = malloc(sizeof(char)*6);
-	strncpy(str, "world", 5);
+	char* str = malloc(sizeof(char)*7);
+	strncpy(str, "world", 7);
 	insert(table, str);
 	char* res = lookup(table, str);
+	printf("%s\n", res);
 	free_hashtable(table);
 	return 0;
 }
